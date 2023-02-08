@@ -6,31 +6,31 @@
     <title>Miss Taffy  Fortune Wheel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
-<body style="text-align: center">
-    <div style="background: #000000">
-        <canvas id="unity-canvas" style="display:block; width:100vw; height:100vh; background: #000000"></canvas>
-    </div>
-    <script src="Build/NoCounterVersion.loader.js"></script>
+  <body style="text-align: center">
+      <div style="background: #000000">
+          <canvas id="unity-canvas" style="display:block; width:100vw; height:100vh; background: #000000"></canvas>
+      </div>
+    <script src="Build/CounterVersion.loader.js"></script>
     <script>
-        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-            // Mobile device style: fill the whole browser client area with the game canvas:
-            var meta = document.createElement('meta');
-            meta.name = 'viewport';
-            meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-            document.getElementsByTagName('head')[0].appendChild(meta);
-        }
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
 
-        createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: "Build/NoCounterVersion.data",
-            frameworkUrl: "Build/NoCounterVersion.framework.js",
-            codeUrl: "Build/NoCounterVersion.wasm",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "DefaultCompany",
-            productName: "RouletteGame",
-            productVersion: "1.0",
-            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-        });
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/CounterVersion.data",
+        frameworkUrl: "Build/CounterVersion.framework.js",
+        codeUrl: "Build/CounterVersion.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "RouletteGame",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
     </script>
-</body>
+  </body>
 </html>
